@@ -1,5 +1,15 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "version": 2,
+  "buildCommand": "npm ci --production=false && npm run build",
+  "installCommand": "npm ci",
+  "framework": null,
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "regions": [
+    "iad1"
+  ],
+  "github": {
+    "enabled": true,
+    "silent": false
+  }
 }
