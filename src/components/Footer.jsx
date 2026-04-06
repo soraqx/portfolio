@@ -1,11 +1,11 @@
-export default function Footer() {
+export default function Footer({ compact = false }) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-8 border-t border-bg-tertiary">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 text-center">
-        <p className="text-text-secondary text-sm">
-          © {currentYear} {/* TODO: Replace with your name */} Your Name. Built with React + Vite + Tailwind.
+    <footer className={`border-t border-bg-tertiary ${compact ? 'py-1 px-2' : 'py-8'}`}>
+      <div className="text-center">
+        <p className={`text-text-secondary ${compact ? 'text-[10px]' : 'text-sm'}`}>
+          © {currentYear} Your Name. Built with React + Vite + Tailwind.
         </p>
       </div>
     </footer>
