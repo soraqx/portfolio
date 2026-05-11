@@ -337,7 +337,7 @@ function App() {
           </div>
 
           {/* Column 2: Projects Grid (40%) - id="projects-grid" for View All scroll */}
-          <section id="projects-grid" className="hidden md:flex bg-bg-secondary border border-bg-tertiary rounded-lg p-4 overflow-auto">
+          <section id="projects-grid" className="hidden md:flex flex-col items-center justify-center bg-bg-secondary border border-bg-tertiary rounded-lg p-4 overflow-auto">
             <Projects compact />
           </section>
 

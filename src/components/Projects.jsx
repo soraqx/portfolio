@@ -16,7 +16,7 @@ export default function Projects({ compact = false }) {
       <p className={`text-text-secondary text-center ${compact ? 'text-xs mb-2' : 'mb-12'}`}>
         Some of my recent work
       </p>
-      <div className={`grid gap-2 ${compact ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'}`}>
+      <div className={`w-full grid justify-items-center gap-2 ${compact ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'}`}>
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
@@ -24,7 +24,7 @@ export default function Projects({ compact = false }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.05 }}
-            className={`bg-bg-tertiary border border-bg-tertiary rounded-lg hover:scale-[1.02] hover:shadow-[0_0_15px_var(--accent-glow)] transition-all duration-300 ${compact ? 'p-3' : 'p-6'}`}
+            className={`w-full bg-bg-tertiary border border-bg-tertiary rounded-lg hover:scale-[1.02] hover:shadow-[0_0_15px_var(--accent-glow)] transition-all duration-300 ${compact ? 'p-3' : 'p-6'}`}
           >
             <h3 className={`font-mono font-bold mb-1 ${compact ? 'text-sm' : 'text-lg'}`}>{project.title}</h3>
             <p className={`text-text-secondary text-text-secondary mb-2 ${compact ? 'text-[10px] line-clamp-1' : 'text-sm line-clamp-2'}`}>
