@@ -125,6 +125,53 @@ body {
   }
 }
 
+/* Scrollbar styling - matches active theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-tertiary);
+  border-radius: 4px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent);
+}
+
+/* Standard scrollbar for Firefox */
+* {
+  scrollbar-color: var(--bg-tertiary) var(--bg-primary);
+  scrollbar-width: thin;
+}
+
+.light ::-webkit-scrollbar-track {
+  background-color: var(--bg-secondary);
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background-color: var(--bg-tertiary);
+  border-color: var(--bg-secondary);
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent);
+}
+
+.light * {
+  scrollbar-color: var(--bg-tertiary) var(--bg-secondary);
+}
+
+.dashboard-container {
+  padding-right: 0.75rem;
+}
+
 .heatmap-level-0 { background-color: var(--bg-tertiary); }
 .heatmap-level-1 { background-color: rgba(255, 0, 255, 0.2); }
 .heatmap-level-2 { background-color: rgba(255, 0, 255, 0.4); }
