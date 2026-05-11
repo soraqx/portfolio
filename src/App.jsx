@@ -342,7 +342,7 @@ function App() {
           </section>
 
           {/* Column 3: Tabbed Dashboard (30%) */}
-          <div className={`hidden lg:flex bg-bg-secondary border border-bg-tertiary rounded-lg p-4 overflow-hidden`}>
+          <div className={`hidden lg:flex flex-col gap-3 pr-3 bg-bg-secondary border border-bg-tertiary rounded-lg p-4 overflow-hidden`}>
             <Dashboard />
           </div>
 
@@ -352,7 +352,7 @@ function App() {
               <section className="bg-bg-secondary border border-bg-tertiary rounded-lg p-4 pb-24">
                 <Projects compact />
               </section>
-              <section className="bg-bg-secondary border border-bg-tertiary rounded-lg p-4">
+              <section className="bg-bg-secondary border border-bg-tertiary rounded-lg p-4 pr-3 pb-24">
                 <Dashboard />
               </section>
             </>
