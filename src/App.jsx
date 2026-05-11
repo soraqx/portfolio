@@ -284,7 +284,7 @@ function App() {
 
   return (
     <AnimatePresence mode="wait">
-      <div className="h-screen overflow-hidden">
+      <div className="min-h-screen overflow-auto">
         <div className="scanline-overlay" />
         <CustomCursor />
         
@@ -324,7 +324,7 @@ function App() {
         {/* Main grid layout */}
         {/* Column widths: ~30% / 40% / 30% balanced distribution */}
         {/* Account for mobile floating tabs with pb-20 on content */}
-        <main className={`grid lg:grid-cols-[30%_40%_30%] grid-cols-1 md:grid-cols-2 gap-3 p-3 ${isMobile ? 'overflow-auto' : 'overflow-hidden'} h-[calc(100vh-3rem)]`}>
+        <main className={`grid lg:grid-cols-[30%_40%_30%] grid-cols-1 md:grid-cols-2 gap-3 p-3 min-h-[calc(100vh-3rem)]`}>
           
           {/* Column 1: Hero + Tech Stack (30%) */}
           <div className={`flex flex-col gap-3 ${isMobile ? '' : 'overflow-hidden'}`}>
@@ -342,7 +342,7 @@ function App() {
           </section>
 
           {/* Column 3: Tabbed Dashboard (30%) */}
-          <div className={`hidden lg:flex flex-col gap-3 pr-3 dashboard-container bg-bg-secondary border border-bg-tertiary rounded-lg p-4 overflow-hidden`}>
+          <div className={`hidden lg:flex flex-col gap-3 mr-3 bg-bg-secondary border border-bg-tertiary rounded-lg p-4 overflow-auto`}>
             <Dashboard />
           </div>
 
